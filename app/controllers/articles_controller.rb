@@ -24,7 +24,7 @@ end
     end
   end
   def  update
-    @article = Article(.find(params[:id])
+    @article = Article.find(params[:id])
 
      if @article.update(article_params)
      redirect_to @article
@@ -36,3 +36,4 @@ end
     params.require(:article).permit(:title, :text)
   end
 end
+end 
